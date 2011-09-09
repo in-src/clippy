@@ -47,13 +47,14 @@ class Clippy {
 		flash.system.Security.allowDomain("*");
     text = flash.Lib.current.loaderInfo.parameters.text;
     func = flash.Lib.current.loaderInfo.parameters.func;
-		var width:Float = Std.parseFloat(flash.Lib.current.loaderInfo.parameters.width) + 150;
-		var height:Float = Std.parseFloat(flash.Lib.current.loaderInfo.parameters.height);
+		var width:Float = Std.parseFloat(flash.Lib.current.loaderInfo.parameters.width) * 2 + 150;
+		var height:Float = Std.parseFloat(flash.Lib.current.loaderInfo.parameters.height) * 2 ;
 		id = flash.Lib.current.loaderInfo.parameters.id;
-/*		log(Std.string(width));*/
 
 		label = new Sprite();
 		label.buttonMode = true;
+		label.x = 0;
+		label.y = 0;
 		label.useHandCursor = true;
     label.graphics.beginFill(0xCCFF00);
 		label.graphics.drawRect(0, 0, Math.floor(width), Math.floor(height));
